@@ -1,0 +1,31 @@
+package com.prajwal;//1 advance java program
+
+//import java.util.Arrays;
+
+public class stringhandling {
+
+    public static void main(String[] args) {
+        String[] stringArray = {"Banana", "Apple", "Orange", "Kiwi","Guava"};
+
+        // Bubble sort implementation
+        for (int i = 0; i < stringArray.length - 1; i++) {
+            for (int j = 0; j < stringArray.length-1; j++) {
+                // Compare adjacent elements
+                if (stringArray[j].compareTo(stringArray[j + 1]) > 0) {
+                    // Swap if out of order
+                    String temp = stringArray[j];
+                    stringArray[j] = stringArray[j + 1];
+                    stringArray[j + 1] = temp;  
+                }
+            }
+        }
+
+        // Print the sorted array
+        System.out.print("Sorted String Array: ");
+        for (String s : stringArray) {
+            System.out.print(s + " ");
+        }
+        System.out.println();
+    }
+
+}
